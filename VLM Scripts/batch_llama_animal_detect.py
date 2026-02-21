@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# Llama Original Model Prediction (Without Fine-tuning)
 import argparse
 import csv
 import os
