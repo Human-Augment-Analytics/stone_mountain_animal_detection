@@ -141,7 +141,6 @@ def run_inference(
     generated_ids = output_ids[:, inputs["input_ids"].shape[1] :]
     result = processor.batch_decode(generated_ids, skip_special_tokens=True)[0].strip()
 
-    # Keep a compact single-field CSV value.
     return " ".join(result.split())
 
 
