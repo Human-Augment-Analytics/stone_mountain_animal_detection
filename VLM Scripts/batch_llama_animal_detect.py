@@ -100,7 +100,6 @@ def load_completed(output_csv: Path, retry_errors: bool) -> set[str]:
 
 
 def build_prompt() -> str:
-    # EXACT SAME PROMPT AS QWEN SCRIPT (do not change for fair comparison)
     return (
         "What animal can you see? Please give me the name of it. "
         "If there is no animal, say 'no'. "
@@ -127,7 +126,7 @@ def run_inference(
         }
     ]
 
-    # EXACT SAME CHAT TEMPLATE FLOW AS QWEN SCRIPT
+
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = processor(text=[text], images=[image], return_tensors="pt")
     inputs = {k: v.to(device) for k, v in inputs.items()}
@@ -140,11 +139,11 @@ def run_inference(
             temperature=0.0,
         )
 
-    # EXACT SAME DECODE/SLICING LOGIC AS QWEN SCRIPT
+
     generated_ids = output_ids[:, inputs["input_ids"].shape[1] :]
     result = processor.batch_decode(generated_ids, skip_special_tokens=True)[0].strip()
 
-    # Keep a compact single-field CSV value.
+
     return " ".join(result.split())
 
 
@@ -169,7 +168,7 @@ def main() -> None:
         print(f"No images found under: {input_dir}")
         return
 
-    # EXACT SAME SHARDING METHOD AS QWEN SCRIPT
+
     images = [p for i, p in enumerate(images) if i % args.num_shards == args.shard_index]
     if not images:
         print(
@@ -177,21 +176,21 @@ def main() -> None:
         )
         return
 
-    # EXACT SAME DEVICE + DTYPE LOGIC AS QWEN SCRIPT (including cuda vs cuda:0 behavior)
+
     device = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
     dtype = torch.bfloat16 if device == "cuda" else torch.float32
 
     print(f"Loading model from: {model_dir}")
     print(f"Using device: {device}")
 
-    # Model swap ONLY: Llama vision model loader via AutoModelForVision2Seq
+
     model = AutoModelForVision2Seq.from_pretrained(
         str(model_dir),
         torch_dtype=dtype,
     ).to(device)
     model.eval()
 
-    # Keep same style as your Qwen script
+
     processor = AutoProcessor.from_pretrained(str(model_dir), use_fast=False)
 
     output_csv.parent.mkdir(parents=True, exist_ok=True)
