@@ -1,0 +1,1 @@
+This folder contains the archived scripts from previous semester which are no longer in use or maintained.
