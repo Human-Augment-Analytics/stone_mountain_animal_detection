@@ -5,4 +5,4 @@ Current Progress Involving:
 1. Gathering prediction accuracies of baseline models from industries such as SpeciesNet and Google Vision.
 2. Generating prediction from open source VLM model such as Llama and Qwen without fine-tuning
 3. Developing specific VLMs for Stone Mountain via fine-tuning
-4. Developing specific VLMs for Stone Mountain via fine-tuning + SAM£ (an image segmentation technique)
+4. Developing specific VLMs for Stone Mountain via fine-tuning + SAM3 (an image segmentation technique)
