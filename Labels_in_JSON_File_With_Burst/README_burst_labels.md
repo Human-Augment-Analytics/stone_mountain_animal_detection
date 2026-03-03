@@ -35,20 +35,34 @@
 
 ### 4. Dynamic Burst Boundary Rules
 
-A new burst was started if any of the following held between consecutive frames:
+Dynamic burst segmentation was performed on temporally ordered frames within each camera stream. For each pair of consecutive frames, we computed two signals: (i)
+temporal gap delta_t in seconds from parsed timestamps, and (ii) visual change using Hamming distance between 64-bit aHash descriptors. A new burst was initiated when
+any one of the following conditions was satisfied:
 
-1. location changed.
-2. Timestamp moved backwards (delta_t < 0).
-3. Hard temporal discontinuity: delta_t > 90 s.
-4. Joint temporal+visual discontinuity: delta_t > 30 s and Hamming > 20.
-5. Large visual discontinuity regardless of time: Hamming > 28.
+1. Location change
+    If the camera location identifier changed between two consecutive frames, the sequence was forcibly split. This prevents cross-camera contamination within the same
+    burst.
+2. Non-monotonic timestamp (delta_t < 0)
+    If the next frame appeared earlier than the previous frame in time (clock mismatch, filename anomaly, or ordering issue), a new burst was started to maintain
+    temporal consistency.
+3. Hard temporal discontinuity (delta_t > 90 s)
+    If inter-frame time exceeded 90 seconds, the pair was treated as different events regardless of visual similarity.
+4. Joint temporal-visual discontinuity (delta_t > 30 s and Hamming > 20)
+    For medium time gaps, splitting required both temporal separation and moderate visual change. This avoids over-splitting when scenes are stable despite moderate
+    timestamp gaps.
+5. Large visual discontinuity (Hamming > 28)
+    If visual change was very large, a new burst was created even when frames were close in time, capturing abrupt scene transitions (e.g., animal enters/exits, major
+    pose/background change).
 
-These thresholds were fixed:
+The fixed hyperparameters used in all v3 experiments were:
 
 - hard_gap_sec = 90
 - soft_gap_sec = 30
 - hash_split_threshold = 20
 - large_change_threshold = 28
+
+Operationally, soft_gap_sec and hash_split_threshold define the joint rule, while large_change_threshold acts as an override for strong visual transitions. This
+design yields variable-length bursts that are constrained by both temporal continuity and image-content continuity.
 
 ### 5. Burst Label Assignment
 
