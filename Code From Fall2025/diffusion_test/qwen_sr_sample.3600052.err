@@ -1,0 +1,65 @@
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+/var/lib/slurm/slurmd/job3600052/slurm_script: line 24: /apps/pace/conda/bin/conda: No such file or directory
+/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:04,  1.15it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:38<01:29, 22.45s/it]Loading pipeline components...:  50%|█████     | 3/6 [00:42<00:42, 14.17s/it]`torch_dtype` is deprecated! Use `dtype` instead!
+Loading pipeline components...:  83%|████████▎ | 5/6 [01:06<00:12, 12.77s/it]Loading pipeline components...: 100%|██████████| 6/6 [01:06<00:00,  9.15s/it]Loading pipeline components...: 100%|██████████| 6/6 [01:06<00:00, 11.06s/it]
+Super-resolving:   0%|                                                        | 0/5 [00:00<?, ?it/s]
+  0%|          | 0/75 [00:00<?, ?it/s][A  0%|          | 0/75 [00:10<?, ?it/s]
+Super-resolving:   0%|                                                        | 0/5 [00:18<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/hice1/kpanchal30/code/HAAG_Stone_Mountain_Species_Detection_Project/diffusion_test/sample_qwen_sd_sm_batches.py", line 228, in <module>
+    main()
+  File "/home/hice1/kpanchal30/code/HAAG_Stone_Mountain_Species_Detection_Project/diffusion_test/sample_qwen_sd_sm_batches.py", line 197, in main
+    enhanced_path = upscale_image(sr_pipe, img_path, BASE_INPUT, BASE_OUTPUT)
+  File "/home/hice1/kpanchal30/code/HAAG_Stone_Mountain_Species_Detection_Project/diffusion_test/sample_qwen_sd_sm_batches.py", line 103, in upscale_image
+    result = sr_pipe(prompt="", image=img)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_upscale.py", line 762, in __call__
+    noise_pred = self.unet(
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/models/unets/unet_2d_condition.py", line 1215, in forward
+    sample, res_samples = downsample_block(
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/models/unets/unet_2d_blocks.py", line 1270, in forward
+    hidden_states = attn(
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/models/transformers/transformer_2d.py", line 427, in forward
+    hidden_states = block(
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/models/attention.py", line 1059, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/models/attention.py", line 1731, in forward
+    hidden_states = module(hidden_states)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/diffusers/models/activations.py", line 117, in forward
+    hidden_states = self.proj(hidden_states)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hice1/kpanchal30/scratch/animal_env/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.91 GiB. GPU 0 has a total capacity of 21.97 GiB of which 6.16 GiB is free. Including non-PyTorch memory, this process has 15.81 GiB memory in use. Of the allocated memory 13.12 GiB is allocated by PyTorch, and 2.49 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

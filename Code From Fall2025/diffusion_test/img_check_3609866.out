@@ -1,0 +1,22 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-21-2025 06:42:35
+Job ID:    3609866
+User ID:   kpanchal30
+Account:   coc
+Job name:  img_check
+Partition: coc-cpu
+QOS:       coc-ice
+---------------------------------------
+Done. Wrote 35932 rows to images_needing_resolution.csv
+---------------------------------------
+Begin Slurm Epilog: Nov-21-2025 07:50:43
+Job ID:        3609866
+User ID:       kpanchal30
+Account:       coc
+Job name:      img_check
+Resources:     cpu=4,mem=16G,node=1
+Rsrc Used:     cput=04:32:32,vmem=0,walltime=01:08:08,mem=16777496K,energy_used=0
+Partition:     coc-cpu
+QOS:           coc-ice
+Nodes:         atl1-1-01-005-2-1
+---------------------------------------

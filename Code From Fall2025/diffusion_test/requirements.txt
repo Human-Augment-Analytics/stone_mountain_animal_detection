@@ -1,0 +1,13 @@
+pillow
+pandas
+openpyxl
+torch
+torchvision
+transformers
+diffusers
+accelerate
+qwen-vl-utils
+tqdm
+scipy
+matplotlib
+seaborn
