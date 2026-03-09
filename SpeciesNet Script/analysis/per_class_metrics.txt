@@ -1,0 +1,68 @@
+Species                                        Precision     Recall         F1    Support
+-----------------------------------------------------------------------------------------
+white-tailed deer                                 0.9933     0.8257     0.9018       7732
+domestic cat                                      0.9375     0.8333     0.8824         18
+virginia opossum                                  1.0000     0.7733     0.8722         75
+eastern gray squirrel                             0.9790     0.7624     0.8572       4158
+raccoon                                           0.9808     0.7071     0.8218        577
+domestic dog                                      1.0000     0.5781     0.7327         64
+coyote                                            0.9221     0.5726     0.7065        124
+great blue heron                                  0.9615     0.5000     0.6579         50
+eastern chipmunk                                  1.0000     0.3370     0.5041         92
+wild boar                                         0.5000     0.2500     0.3333          8
+blue jay                                          1.0000     0.1765     0.3000         17
+american robin                                    1.0000     0.0741     0.1379         27
+bird                                              0.0068     0.0667     0.0123         45
+anatidae family                                   0.0000     0.0000     0.0000          0
+animal                                            0.0000     0.0000     0.0000          0
+anseriformes order                                0.0000     0.0000     0.0000          0
+ardea species                                     0.0000     0.0000     0.0000          0
+artiodactyla order                                0.0000     0.0000     0.0000          0
+barred owl                                        0.0000     0.0000     0.0000         30
+blank                                             0.0000     0.0000     0.0000          0
+canada goose                                      0.0000     0.0000     0.0000        453
+canine family                                     0.0000     0.0000     0.0000          0
+canis species                                     0.0000     0.0000     0.0000          0
+caprimulgidae family                              0.0000     0.0000     0.0000          0
+carnivorous mammal                                0.0000     0.0000     0.0000          0
+carolina chickadee                                0.0000     0.0000     0.0000          3
+cat family                                        0.0000     0.0000     0.0000          0
+columbidae family                                 0.0000     0.0000     0.0000          0
+cooper's hawk                                     0.0000     0.0000     0.0000         11
+corvidae family                                   0.0000     0.0000     0.0000          0
+cricetidae                                        0.0000     0.0000     0.0000        100
+d126f0ec-82dd-46f0-b76a-5985ff6bbc9b;mammalia;primates;hominidae;homo;;     0.0000     0.0000     0.0000          0
+didelphis species                                 0.0000     0.0000     0.0000          0
+domestic cattle                                   0.0000     0.0000     0.0000          0
+downy woodpecker                                  0.0000     0.0000     0.0000          6
+eastern bluebird                                  0.0000     0.0000     0.0000          8
+eastern cottontail                                0.0000     0.0000     0.0000          0
+eastern phoebe                                    0.0000     0.0000     0.0000          3
+eastern whip-poor-will                            0.0000     0.0000     0.0000         36
+eastern wood pewee                                0.0000     0.0000     0.0000          9
+glaucomys species                                 0.0000     0.0000     0.0000          0
+hermit thrush                                     0.0000     0.0000     0.0000          1
+house finch                                       0.0000     0.0000     0.0000          3
+human                                             0.0000     0.0000     0.0000          3
+long-tailed weasel                                0.0000     0.0000     0.0000          3
+mammal                                            0.0000     0.0000     0.0000          0
+meleagris species                                 0.0000     0.0000     0.0000          0
+moth                                              0.0000     0.0000     0.0000          3
+mourning dove                                     0.0000     0.0000     0.0000         13
+no cv result                                      0.0000     0.0000     0.0000          0
+northern cardinal                                 0.0000     0.0000     0.0000         18
+northern mockingbird                              0.0000     0.0000     0.0000          3
+owl                                               0.0000     0.0000     0.0000          0
+passerine                                         0.0000     0.0000     0.0000          6
+peromyscus species                                0.0000     0.0000     0.0000          0
+procyon species                                   0.0000     0.0000     0.0000          0
+rabbit and hare family                            0.0000     0.0000     0.0000          0
+raptor                                            0.0000     0.0000     0.0000          3
+red fox                                           0.0000     0.0000     0.0000          0
+red-shouldered hawk                               0.0000     0.0000     0.0000          6
+rodent                                            0.0000     0.0000     0.0000          0
+sciuridae family                                  0.0000     0.0000     0.0000          0
+southern flying squirrel                          0.0000     0.0000     0.0000          9
+spider                                            0.0000     0.0000     0.0000          3
+thrush                                            0.0000     0.0000     0.0000          3
+unknown                                           0.0000     0.0000     0.0000       1613

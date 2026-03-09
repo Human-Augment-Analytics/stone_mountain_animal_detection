@@ -1,0 +1,22 @@
+True Label                          Predicted As                         Count
+----------------------------------- ----------------------------------- ------
+unknown                             blank                                 1506
+white-tailed deer                   blank                                  978
+eastern gray squirrel               blank                                  870
+canada goose                        bird                                   353
+white-tailed deer                   no cv result                           158
+raccoon                             blank                                  116
+white-tailed deer                   animal                                  66
+white-tailed deer                   eastern gray squirrel                   59
+eastern gray squirrel               no cv result                            59
+canada goose                        animal                                  54
+white-tailed deer                   mammal                                  53
+unknown                             no cv result                            44
+eastern chipmunk                    blank                                   33
+canada goose                        blank                                   32
+bird                                blank                                   29
+cricetidae                          blank                                   26
+cricetidae                          rodent                                  26
+coyote                              blank                                   25
+cricetidae                          mammal                                  24
+eastern gray squirrel               white-tailed deer                       18
