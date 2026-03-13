@@ -1,4 +1,4 @@
-#### Methodology (Dynamic Burst Construction)
+# Methodology (Dynamic Burst Construction)
 
 ### 1. Input Data Preparation
 
