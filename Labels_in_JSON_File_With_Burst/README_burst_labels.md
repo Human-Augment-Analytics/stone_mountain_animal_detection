@@ -84,10 +84,10 @@ Burst IDs were generated as:
 - Deterministic components:
 
 1. Fixed thresholds.
-2. Fixed seed (42) for split assignment.
-3. Deterministic sorting before segmentation.
+2. Deterministic sorting before segmentation.
+3. Same burst ID should not be splitted across train, valid and test sets of data (i.e., It should be burst proof.).
 
 “The dynamic event-level bursts are constructed using a hybrid temporal-visual segmentation algorithm. Consecutive frames were grouped by location/date and segmented using
 filename-derived inter-frame time gaps and perceptual frame change measured by 64-bit average-hash Hamming distance. Burst labels were assigned by within-burst
-majority vote, and data were split at burst level (80/10/10) to prevent cross-split leakage of temporally adjacent frames.”
+majority vote, and data were split at burst level to prevent cross-split leakage of temporally adjacent frames.”
 
