@@ -107,8 +107,6 @@ Observed counts:
 2. Fixed seed (42) for split assignment.
 3. Deterministic sorting before segmentation.
 
-### 9. Suggested Paper Wording (Short)
-
 “The dynamic event-level bursts are constructed using a hybrid temporal-visual segmentation algorithm. Consecutive frames were grouped by location/date and segmented using
 filename-derived inter-frame time gaps and perceptual frame change measured by 64-bit average-hash Hamming distance. Burst labels were assigned by within-burst
 majority vote, and data were split at burst level (80/10/10) to prevent cross-split leakage of temporally adjacent frames.”
