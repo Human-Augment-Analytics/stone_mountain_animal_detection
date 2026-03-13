@@ -79,7 +79,7 @@ Burst IDs were generated as:
 - Random seed: 42.
 - Bursts were shuffled, then assigned to train/validation/test.
 
-### 7. Reproducibility
+### 6. Reproducibility
 
 - Deterministic components:
 
