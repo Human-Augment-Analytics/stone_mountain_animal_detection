@@ -73,11 +73,7 @@ For each dynamic burst:
 Burst IDs were generated as:
 
 - {location}_{capture_date}_dynburst_{6-digit-index}
-
 - Splitting was performed at burst level (not frame level), preventing leakage of related frames across splits.
-- Ratios: 80% / 10% / 10%.
-- Random seed: 42.
-- Bursts were shuffled, then assigned to train/validation/test.
 
 ### 6. Reproducibility
 
@@ -85,7 +81,7 @@ Burst IDs were generated as:
 
 1. Fixed thresholds.
 2. Deterministic sorting before segmentation.
-3. Same burst ID should not be splitted across train, valid and test sets of data (i.e., It should be burst proof.).
+3. Data with same burst ID should not be splitted across train, valid and test sets of data (i.e., It should be burst proof.).
 
 “The dynamic event-level bursts are constructed using a hybrid temporal-visual segmentation algorithm. Consecutive frames were grouped by location/date and segmented using
 filename-derived inter-frame time gaps and perceptual frame change measured by 64-bit average-hash Hamming distance. Burst labels were assigned by within-burst
