@@ -1,12 +1,8 @@
-• Methodology (Dynamic Burst Construction)
+#### Methodology (Dynamic Burst Construction)
 
 ### 1. Input Data Preparation
 
-- Source annotations were loaded from three JSON files:
-
-1. split_train_80_with_sam3.json
-2. split_validation_10_with_sam3.json
-3. split_test_unseen_10_with_sam3.json
+- Input: The full set of labels with corresponding valid directories of the dataset.
 
 - Each record includes image paths, metadata, and labels (correct_label, location, capture_date, night_time).
 - To avoid duplicate frame variants, one record per original frame was retained using file_path_original (or file_path fallback), prioritizing image_variant ==
@@ -83,23 +79,7 @@ Burst IDs were generated as:
 - Random seed: 42.
 - Bursts were shuffled, then assigned to train/validation/test.
 
-### 7. Final v3 Output Statistics
-
-Generated files:
-
-1. split_train_80_dynamic_burst_with_sam3_v3.json
-2. split_validation_10_dynamic_burst_with_sam3_v3.json
-3. split_test_10_dynamic_burst_with_sam3_v3.json
-
-Observed counts:
-
-- Train: 1966 bursts, 10152 frames
-- Validation: 246 bursts, 1264 frames
-- Test: 245 bursts, 1322 frames
-- Total: 2457 bursts
-- Mean burst length: 5.184 frames
-
-### 8. Reproducibility
+### 7. Reproducibility
 
 - Deterministic components:
 
