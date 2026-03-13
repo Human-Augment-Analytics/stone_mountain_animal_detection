@@ -1,0 +1,6 @@
+{
+  "split": "validation",
+  "samples": 1523,
+  "correct": 1252,
+  "accuracy": 0.8220617202889035
+}
